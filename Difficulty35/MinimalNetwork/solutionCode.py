@@ -2,6 +2,7 @@ from datetime import timedelta
 from itertools import chain
 import time
 
+
 starttime = time.time()
 
 edges = []
@@ -27,6 +28,8 @@ for i in range(1, len(matrixList)):
         originalWeight += int(matrixList[i][j])
     x+=1
 
+  
+#gave each node a name for easier debugging. 
 
 names = ['THOMAS','JAMES','JACK','DANIEL','MATTHEW','RYAN','JOSHUA','LUKE','SAMUEL','JORDAN','ADAM',
 'MICHAEL','ALEXANDER','CHRISTOPHER','BENJAMIN','JOSEPH','LIAM','JAKE','WILLIAM','ANDREW','GEORGE',
@@ -48,7 +51,6 @@ for i in range(1, len(matrixList)):
         edges.append(edge(w, names[i] , names[j]))
     b+=1
 
-print("WorksUntilHere")
 
 edges.sort(key=lambda x: x.weight)
 
